@@ -398,3 +398,198 @@ h1{margin:0;font-size:clamp(36px,7vw,55px);line-height:.98;letter-spacing:-2.6px
   .primary-actions .big-action.share{grid-column:1}
   .contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
+
+
+/* Mobile v2 — force true phone layout */
+@media(max-width:620px){
+  .card{
+    padding:
+      max(18px,env(safe-area-inset-top))
+      18px
+      calc(42px + env(safe-area-inset-bottom))
+      18px !important;
+  }
+
+  .hero{
+    display:block !important;
+    min-height:0 !important;
+  }
+
+  .hero-copy{
+    width:100% !important;
+    position:relative !important;
+  }
+
+  .brand-row-full{
+    height:44px !important;
+    margin-bottom:18px;
+  }
+
+  .brand-full-logo{
+    width:165px !important;
+    height:40px !important;
+    max-width:72% !important;
+  }
+
+  .identity{
+    width:100% !important;
+    max-width:none !important;
+    padding:0 !important;
+  }
+
+  .eyebrow{
+    font-size:9px !important;
+    margin-bottom:8px !important;
+  }
+
+  h1{
+    font-size:40px !important;
+    line-height:.96 !important;
+    letter-spacing:-2px !important;
+  }
+
+  .role{
+    font-size:15px !important;
+    margin-top:10px !important;
+  }
+
+  .intro{
+    font-size:12.5px !important;
+    line-height:1.5 !important;
+    margin-top:14px !important;
+  }
+
+  .signature-line{
+    font-size:17px !important;
+    margin-top:13px !important;
+  }
+
+  .portrait-wrap{
+    position:relative !important;
+    inset:auto !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:16/10 !important;
+    margin-top:18px !important;
+    border-radius:20px !important;
+    overflow:hidden !important;
+    pointer-events:auto !important;
+  }
+
+  .portrait{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center 22% !important;
+    transform:scale(1.07) !important;
+    opacity:1 !important;
+    border-radius:20px !important;
+  }
+
+  .portrait-fallback{
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    border-radius:20px !important;
+  }
+
+  .primary-actions{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:9px !important;
+    margin-top:16px !important;
+  }
+
+  .primary-actions .big-action,
+  .primary-actions .big-action:first-child,
+  .primary-actions .big-action.share{
+    grid-column:auto !important;
+  }
+
+  .big-action{
+    min-height:70px !important;
+    padding:10px !important;
+    border-radius:15px !important;
+    grid-template-columns:36px minmax(0,1fr) 14px !important;
+    gap:7px !important;
+  }
+
+  .big-icon{
+    width:36px !important;
+    height:36px !important;
+    border-radius:11px !important;
+    font-size:17px !important;
+  }
+
+  .apple-icon{font-size:21px !important}
+
+  .big-action small{
+    display:none !important;
+  }
+
+  .big-action strong{
+    font-size:12px !important;
+    line-height:1.15 !important;
+  }
+
+  .chev{
+    font-size:20px !important;
+  }
+
+  .wallet-status{
+    margin:9px 0 11px !important;
+    font-size:9px !important;
+  }
+
+  .contact-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:8px !important;
+  }
+
+  .contact-grid a{
+    min-height:62px !important;
+    font-size:10px !important;
+    border-radius:14px !important;
+  }
+
+  .contact-icon{
+    width:28px !important;
+    height:28px !important;
+    font-size:15px !important;
+  }
+
+  .services{
+    padding:14px !important;
+    margin-top:11px !important;
+    border-radius:18px !important;
+  }
+
+  .service-grid div{
+    min-height:78px !important;
+    padding:8px 5px !important;
+  }
+
+  .service-grid span{
+    font-size:18px !important;
+  }
+
+  .service-grid strong{
+    font-size:9.5px !important;
+  }
+
+  .services-link{
+    min-height:44px !important;
+    font-size:13px !important;
+  }
+
+  .closing{
+    margin-top:18px !important;
+  }
+}
+
+@media(max-width:360px){
+  h1{font-size:36px !important}
+  .primary-actions{grid-template-columns:1fr !important}
+}
