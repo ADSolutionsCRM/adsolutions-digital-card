@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ADSolutions Digital Card Profile",
+  "type": "object",
+  "required": ["name", "company", "email"],
+  "properties": {
+    "slug": {"type": "string"},
+    "name": {"type": "string"},
+    "role": {"type": "string"},
+    "company": {"type": "string"},
+    "email": {"type": "string", "format": "email"},
+    "phone": {"type": "string"},
+    "whatsapp": {"type": "string"},
+    "website": {"type": "string"},
+    "linkedin": {"type": "string"},
+    "instagram": {"type": "string"},
+    "tagline": {"type": "string"},
+    "description": {"type": "string"},
+    "wallet": {
+      "type": "object",
+      "properties": {
+        "apple": {"type": "string"},
+        "google": {"type": "string"}
+      }
+    }
+  }
+}
