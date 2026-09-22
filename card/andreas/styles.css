@@ -593,3 +593,49 @@ h1{margin:0;font-size:clamp(36px,7vw,55px);line-height:.98;letter-spacing:-2.6px
   h1{font-size:36px !important}
   .primary-actions{grid-template-columns:1fr !important}
 }
+
+
+/* Mobile portrait refinement — passport profile */
+@media(max-width:620px){
+  .portrait-wrap{
+    position:relative !important;
+    inset:auto !important;
+    width:min(58vw,230px) !important;
+    max-width:230px !important;
+    height:auto !important;
+    aspect-ratio:4/5 !important;
+    margin:18px auto 0 !important;
+    border-radius:22px !important;
+    overflow:hidden !important;
+    border:1px solid rgba(148,184,235,.18) !important;
+    background:#081525 !important;
+  }
+
+  .portrait{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center 16% !important;
+    transform:scale(1.02) !important;
+    transform-origin:center top !important;
+    opacity:1 !important;
+    border-radius:22px !important;
+  }
+
+  .portrait-fallback{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    border-radius:22px !important;
+  }
+}
+
+@media(max-width:390px){
+  .portrait-wrap{
+    width:min(62vw,218px) !important;
+    max-width:218px !important;
+  }
+}
