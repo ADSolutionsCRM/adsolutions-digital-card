@@ -32,6 +32,8 @@ photo_b64 = base64.b64encode(buf.getvalue()).decode("ascii")
 lines = [
     "BEGIN:VCARD",
     "VERSION:3.0",
+    "PRODID:-//ADSolutions//Digital Card//EN",
+    "UID:adsolutions-andreas-demetriou-001",
     "N:Demetriou;Andreas;;;",
     "FN:Andreas Demetriou",
     "ORG:ADSolutions",
