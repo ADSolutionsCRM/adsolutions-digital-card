@@ -38,9 +38,9 @@ h1{margin:0;font-size:clamp(36px,7vw,55px);line-height:.98;letter-spacing:-2.6px
 .intro{margin:20px 0 0;color:#b3c1d0;font-size:14px;line-height:1.7}
 .signature-line{margin:19px 0 0;font-size:21px;font-style:italic;color:#33cfff;letter-spacing:.2px}
 
-.portrait-wrap{position:relative;height:360px;align-self:end}
+.portrait-wrap{position:relative;height:360px;align-self:end;overflow:hidden;border-radius:26px}
 .portrait-halo{position:absolute;inset:18% -8% 3% 10%;border-radius:50%;background:radial-gradient(circle,rgba(48,111,255,.33),rgba(99,36,220,.18) 48%,transparent 70%);filter:blur(14px)}
-.portrait{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center 18%;filter:drop-shadow(0 20px 36px rgba(0,0,0,.35));border-radius:26px}
+.portrait{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center 18%;transform:scale(1.07);transform-origin:center center;filter:drop-shadow(0 20px 36px rgba(0,0,0,.35));border-radius:26px}
 
 .primary-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
 .big-action{min-height:78px;padding:14px 16px;border:1px solid rgba(89,137,211,.43);border-radius:18px;background:linear-gradient(145deg,rgba(11,28,47,.95),rgba(5,15,27,.95));color:var(--text);display:grid;grid-template-columns:48px 1fr auto;gap:12px;align-items:center;text-align:left;text-decoration:none;cursor:pointer;transition:transform .18s ease,border-color .18s ease,background .18s ease}
@@ -91,7 +91,7 @@ h1{margin:0;font-size:clamp(36px,7vw,55px);line-height:.98;letter-spacing:-2.6px
   .hero-copy{z-index:2}
   .identity{padding:34px 0 10px;max-width:70%}
   .portrait-wrap{position:absolute;z-index:1;right:0;top:64px;width:58%;height:340px;pointer-events:none}
-  .portrait{inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%;opacity:.96}
+  .portrait{inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%;transform:scale(1.07);transform-origin:center center;opacity:.96}
   .portrait-halo{inset:18% -15% 5% 10%}
   h1{font-size:39px}
   .primary-actions{grid-template-columns:1fr;margin-top:38px}
