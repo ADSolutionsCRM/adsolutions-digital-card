@@ -58,6 +58,20 @@
   const save = $("save-contact");
   if (save && cfg.contactFile) save.href = cfg.contactFile;
 
+  const qrContainer = $("dynamic-qr");
+  if (qrContainer && window.QRCode) {
+    const qrUrl = window.location.origin + window.location.pathname;
+    qrContainer.innerHTML = "";
+    new QRCode(qrContainer, {
+      text: qrUrl,
+      width: 180,
+      height: 180,
+      colorDark: "#071321",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  }
+
   const activateWalletLink = (id, url) => {
     const el = $(id);
     if (!el || !url) return false;
