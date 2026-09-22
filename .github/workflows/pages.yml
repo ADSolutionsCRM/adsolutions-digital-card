@@ -28,10 +28,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Build contact vCard with portrait
+      - name: Build contact vCard and branded app icons
         run: |
           python -m pip install --disable-pip-version-check --quiet pillow
           python scripts/build_contact_vcard.py
+          python scripts/build_pwa_icons.py
 
       - name: Prepare clean custom-domain route
         run: |
