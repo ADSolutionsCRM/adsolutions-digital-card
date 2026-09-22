@@ -1,4 +1,5 @@
 name: Deploy ADSolutions Digital Card to GitHub Pages
+# Custom domain: card.adsolutionsglobal.com
 
 on:
   push:
