@@ -4,7 +4,7 @@ import base64
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-PORTRAIT = ROOT / "assets" / "portraits" / "andreas-contact-only.jpg"
+PORTRAIT = ROOT / "assets" / "portraits" / "andreas-contact-branded.jpg"
 OUTPUT = ROOT / "card" / "andreas" / "contact.vcf"
 
 def fold_vcard_line(line: str, width: int = 74) -> str:
@@ -19,10 +19,10 @@ def fold_vcard_line(line: str, width: int = 74) -> str:
     return "\r\n ".join(chunks)
 
 img = Image.open(PORTRAIT).convert("RGB")
-photo = img.resize((320, 320), Image.Resampling.LANCZOS)
+photo = img.resize((700, 700), Image.Resampling.LANCZOS)
 
 buf = BytesIO()
-photo.save(buf, format="JPEG", quality=88, optimize=True, progressive=True)
+photo.save(buf, format="JPEG", quality=94, optimize=True, progressive=True)
 photo_b64 = base64.b64encode(buf.getvalue()).decode("ascii")
 
 lines = [
@@ -35,7 +35,7 @@ lines = [
     "ORG:ADSolutions",
     "TITLE:Founder",
     "TEL;TYPE=CELL,VOICE:+35796551277",
-    "EMAIL;TYPE=INTERNET,WORK:info@adsolutionsglobal.com",
+    "EMAIL;TYPE=INTERNET,WORK:andreas.demetriou@adsolutionsglobal.com",
     "URL;TYPE=WORK:https://adsolutionsglobal.com",
     "URL;TYPE=LinkedIn:https://www.linkedin.com/in/andreas-demetriou-b472a7a3",
     "URL;TYPE=Instagram:https://instagram.com/adsolutions.hq",
