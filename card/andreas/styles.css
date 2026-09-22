@@ -113,6 +113,6 @@ h1{margin:0;font-size:clamp(36px,7vw,55px);line-height:.98;letter-spacing:-2.6px
 @media(max-width:620px){.portrait-fallback{right:-20px;width:118%;height:82%;opacity:.9}}
 
 
-.brand-row-full{display:block}
-.brand-full-logo{display:block;width:220px;max-width:72%;height:auto;object-fit:contain;object-position:left center;filter:drop-shadow(0 8px 22px rgba(0,0,0,.18))}
-@media(max-width:620px){.brand-full-logo{width:190px;max-width:68%}}
+.brand-row-full{display:flex;align-items:center;height:56px;overflow:hidden}
+.brand-full-logo{display:block;width:210px;height:52px;max-width:none;object-fit:contain;object-position:left center;filter:drop-shadow(0 6px 16px rgba(0,0,0,.18))}
+@media(max-width:620px){.brand-row-full{height:50px}.brand-full-logo{width:185px;height:46px}}
