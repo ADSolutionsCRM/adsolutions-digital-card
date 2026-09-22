@@ -4,7 +4,7 @@ import base64
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-PORTRAIT = ROOT / "assets" / "portraits" / "ChatGPT Image Sep 22, 2026, 02_45_11 PM.png"
+PORTRAIT = ROOT / "assets" / "portraits" / "andreas-contact-only.jpg"
 OUTPUT = ROOT / "card" / "andreas" / "contact.vcf"
 
 def fold_vcard_line(line: str, width: int = 74) -> str:
@@ -19,11 +19,7 @@ def fold_vcard_line(line: str, width: int = 74) -> str:
     return "\r\n ".join(chunks)
 
 img = Image.open(PORTRAIT).convert("RGB")
-w, h = img.size
-
-# Use the exact approved ADSolutions portrait shown on the digital card.
-# Keep the full square composition; iOS Contacts applies its own circular crop.
-photo = img.resize((600, 600), Image.Resampling.LANCZOS)
+photo = img.resize((320, 320), Image.Resampling.LANCZOS)
 
 buf = BytesIO()
 photo.save(buf, format="JPEG", quality=88, optimize=True, progressive=True)
@@ -49,4 +45,4 @@ lines = [
     "END:VCARD",
 ]
 OUTPUT.write_bytes(("\r\n".join(lines) + "\r\n").encode("utf-8"))
-print(f"Built {OUTPUT} with embedded JPEG contact photo ({len(buf.getvalue())} bytes).")
+print(f"Built {OUTPUT} with dedicated embedded contact photo ({len(buf.getvalue())} bytes).")
