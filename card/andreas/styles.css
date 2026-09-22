@@ -26,7 +26,8 @@ button,a{font:inherit}
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;min-height:360px;align-items:end}
 .hero-copy{padding-top:4px}
 .brand-row{display:flex;align-items:center;gap:13px}
-.monogram{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;font-weight:800;letter-spacing:-1.5px;background:linear-gradient(135deg,var(--cyan),var(--blue) 48%,var(--purple));box-shadow:0 12px 38px rgba(31,114,255,.30)}
+.monogram{width:58px;height:58px;display:grid;place-items:center;filter:drop-shadow(0 12px 28px rgba(31,114,255,.25))}
+.monogram img{display:block;width:100%;height:100%;object-fit:contain}
 .brand-name{font-size:22px;font-weight:800;letter-spacing:-.6px}
 .brand-tagline{margin-top:5px;color:#c7d3e1;font-size:9px;letter-spacing:1.7px}
 .identity{padding:46px 0 30px}
@@ -111,5 +112,3 @@ h1{margin:0;font-size:clamp(36px,7vw,55px);line-height:.98;letter-spacing:-2.6px
 .portrait-fallback{position:absolute;right:0;bottom:0;width:92%;height:82%;border-radius:26px 26px 18px 18px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(34,211,238,.12),rgba(139,53,255,.14));border:1px solid rgba(148,184,235,.12);font-size:86px;font-weight:800;letter-spacing:-4px;color:rgba(255,255,255,.11)}
 @media(max-width:620px){.portrait-fallback{right:-20px;width:118%;height:82%;opacity:.9}}
 
-.brand-lockup{display:block;width:min(100%,300px);height:auto;object-fit:contain;object-position:left center;filter:drop-shadow(0 8px 22px rgba(0,0,0,.18))}
-@media(max-width:620px){.brand-lockup{width:min(100%,250px)}}
