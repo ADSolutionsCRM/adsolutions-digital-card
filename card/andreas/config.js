@@ -7,9 +7,9 @@ window.ADS_WALLET_CARD = {
     email: "info@adsolutionsglobal.com",
     website: "https://adsolutionsglobal.com",
     instagram: "https://instagram.com/adsolutions.hq",
-    phone: "",
-    whatsapp: "",
-    linkedin: ""
+    phone: "+35796551277",
+    whatsapp: "https://wa.me/35796551277",
+    linkedin: "https://www.linkedin.com/in/andreas-demetriou-b472a7a3"
   },
   wallet: {
     appleWalletUrl: "",
