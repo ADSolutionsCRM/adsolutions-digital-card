@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#06101e" />
+  <meta name="description" content="Andreas Demetriou — Founder, ADSolutions" />
+  <title>Andreas Demetriou | ADSolutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <article class="card" aria-label="Andreas Demetriou digital business card">
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="brand-row">
+            <div class="monogram" aria-label="ADSolutions">AD</div>
+            <div>
+              <div class="brand-name">ADSolutions</div>
+              <div class="brand-tagline">STRATEGY · INNOVATION · GROWTH</div>
+            </div>
+          </div>
+
+          <div class="identity">
+            <p class="eyebrow">DIGITAL BUSINESS CARD</p>
+            <h1 id="profile-name">Andreas Demetriou</h1>
+            <p class="role"><span id="profile-role">Founder</span> <span class="dot">·</span> <span id="profile-company">ADSolutions</span></p>
+            <p class="intro">Business Automation · Operational Solutions<br>Websites · CRM · Strategic Support</p>
+            <p class="signature-line">Let’s Build What’s Next.</p>
+          </div>
+        </div>
+
+        <div class="portrait-wrap">
+          <div class="portrait-halo"></div>
+          <img class="portrait" src="./assets/andreas-portrait.webp" alt="Portrait of Andreas Demetriou">
+        </div>
+      </section>
+
+      <section class="primary-actions" aria-label="Main actions">
+        <a class="big-action primary" id="save-contact" href="./contact.vcf" download>
+          <span class="big-icon">＋</span>
+          <span><small>ADD TO YOUR CONTACTS</small><strong>Save Contact</strong></span>
+          <span class="chev">›</span>
+        </a>
+
+        <a id="apple-wallet" class="big-action disabled" href="#" aria-disabled="true">
+          <span class="big-icon apple-icon"></span>
+          <span><small>KEEP MY DETAILS ON IPHONE</small><strong>Add to Apple Wallet</strong></span>
+          <span class="chev">›</span>
+        </a>
+
+        <a id="google-wallet" class="big-action disabled" href="#" aria-disabled="true">
+          <span class="big-icon google-icon">G</span>
+          <span><small>SAVE TO YOUR ANDROID DEVICE</small><strong>Add to Google Wallet</strong></span>
+          <span class="chev">›</span>
+        </a>
+
+        <button class="big-action share" id="share-card" type="button">
+          <span class="big-icon">↗</span>
+          <span><small>SEND THIS CARD</small><strong>Share Card</strong></span>
+          <span class="chev">›</span>
+        </button>
+      </section>
+
+      <p id="wallet-status" class="wallet-status">Wallet activation is being prepared.</p>
+
+      <nav class="contact-grid" aria-label="Contact links">
+        <a id="email-link" href="mailto:info@adsolutionsglobal.com">
+          <span class="contact-icon">✉</span><span>Email</span>
+        </a>
+        <a id="website-link" href="https://adsolutionsglobal.com" target="_blank" rel="noopener">
+          <span class="contact-icon">◎</span><span>Website</span>
+        </a>
+        <a id="instagram-link" href="https://instagram.com/adsolutions.hq" target="_blank" rel="noopener">
+          <span class="contact-icon">◉</span><span>Instagram</span>
+        </a>
+        <a id="whatsapp-link" class="optional hidden" href="#" target="_blank" rel="noopener">
+          <span class="contact-icon">◌</span><span>WhatsApp</span>
+        </a>
+        <a id="linkedin-link" class="optional hidden" href="#" target="_blank" rel="noopener">
+          <span class="contact-icon">in</span><span>LinkedIn</span>
+        </a>
+      </nav>
+
+      <section class="services">
+        <p class="section-label">WHAT ADSOLUTIONS DOES</p>
+        <div class="service-grid">
+          <div><span>⚙</span><strong>Business<br>Automation</strong></div>
+          <div><span>▣</span><strong>Websites &<br>Digital Presence</strong></div>
+          <div><span>◫</span><strong>CRM<br>Solutions</strong></div>
+          <div><span>▥</span><strong>Operational &<br>Resource Planning</strong></div>
+          <div><span>◎</span><strong>Consulting &<br>Support</strong></div>
+        </div>
+        <a class="services-link" href="https://adsolutionsglobal.com" target="_blank" rel="noopener">
+          <span>View Our Services</span><span>›</span>
+        </a>
+      </section>
+
+      <footer class="closing">
+        <div>
+          <p>“SMARTER PROCESSES.<br>BETTER DECISIONS.”</p>
+          <span class="accent-line"></span>
+        </div>
+        <div class="closing-brand">
+          <strong>Andreas Demetriou</strong>
+          <span>ADSolutions</span>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
