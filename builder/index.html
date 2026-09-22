@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>ADSolutions Digital Card Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark">AD</div>
+      <div>
+        <strong>ADSolutions</strong>
+        <span>Digital Card Builder</span>
+      </div>
+    </div>
+    <span class="badge">PRODUCT PROTOTYPE</span>
+  </header>
+
+  <main class="layout">
+    <section class="builder-panel">
+      <div class="section-head">
+        <p class="eyebrow">BUILD YOUR CARD</p>
+        <h1>Create your digital identity.</h1>
+        <p>Enter your details and see your ADSolutions digital card update instantly.</p>
+      </div>
+
+      <form id="builder-form" class="form-grid">
+        <label>Full name<input id="name" value="Andreas Demetriou"></label>
+        <label>Role / Title<input id="role" value="Founder"></label>
+        <label>Company<input id="company" value="ADSolutions"></label>
+        <label>Email<input id="email" type="email" value="info@adsolutionsglobal.com"></label>
+        <label>Phone<input id="phone" placeholder="+357..."></label>
+        <label>WhatsApp<input id="whatsapp" placeholder="+357..."></label>
+        <label>Website<input id="website" value="https://adsolutionsglobal.com"></label>
+        <label>LinkedIn<input id="linkedin" placeholder="https://linkedin.com/in/..."></label>
+        <label>Instagram<input id="instagram" value="https://instagram.com/adsolutions.hq"></label>
+        <label>Tagline<input id="tagline" value="Strategy · Innovation · Growth"></label>
+        <label class="span-2">Short description<textarea id="description">Business automation, operational solutions, websites, CRM and strategic support.</textarea></label>
+
+        <label>Profile photo
+          <input id="photo" type="file" accept="image/*">
+        </label>
+        <label>Company logo
+          <input id="logo" type="file" accept="image/*">
+        </label>
+      </form>
+
+      <div class="builder-actions">
+        <button id="export-profile" type="button" class="primary">Export Profile</button>
+        <button id="reset-profile" type="button">Reset</button>
+      </div>
+
+      <div class="platform-note">
+        <strong>Wallet readiness</strong>
+        <span>Apple Wallet activation is waiting for ADSolutions Developer Program approval. Google Wallet will use the same customer profile.</span>
+      </div>
+    </section>
+
+    <section class="preview-panel">
+      <p class="preview-label">LIVE PREVIEW</p>
+      <article class="card" id="card-preview">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+
+        <div class="card-brand">
+          <div class="preview-logo" id="preview-logo">AD</div>
+          <div>
+            <strong id="preview-company">ADSolutions</strong>
+            <span id="preview-tagline">STRATEGY · INNOVATION · GROWTH</span>
+          </div>
+        </div>
+
+        <div class="card-hero">
+          <div class="identity">
+            <p class="micro">DIGITAL BUSINESS CARD</p>
+            <h2 id="preview-name">Andreas Demetriou</h2>
+            <p id="preview-role">Founder</p>
+            <p id="preview-description">Business automation, operational solutions, websites, CRM and strategic support.</p>
+          </div>
+          <div class="photo-wrap">
+            <div id="preview-photo" class="photo-placeholder">AD</div>
+          </div>
+        </div>
+
+        <div class="wallet-row">
+          <button type="button" disabled><span></span> Add to Apple Wallet</button>
+          <button type="button" disabled><span class="g">G</span> Add to Google Wallet</button>
+        </div>
+
+        <div class="contact-row">
+          <a id="preview-email" href="mailto:info@adsolutionsglobal.com">Email</a>
+          <a id="preview-website" href="https://adsolutionsglobal.com" target="_blank" rel="noopener">Website</a>
+          <a id="preview-instagram" href="https://instagram.com/adsolutions.hq" target="_blank" rel="noopener">Instagram</a>
+          <a id="preview-linkedin" class="hidden" href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a id="preview-whatsapp" class="hidden" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a id="preview-phone" class="hidden" href="#">Call</a>
+        </div>
+
+        <footer>
+          <span>Smarter processes. Better decisions.</span>
+          <strong>Powered by ADSolutions</strong>
+        </footer>
+      </article>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
