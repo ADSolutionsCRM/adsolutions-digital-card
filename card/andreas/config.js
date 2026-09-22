@@ -15,5 +15,5 @@ window.ADS_WALLET_CARD = {
     appleWalletUrl: "",
     googleWalletUrl: ""
   },
-  contactFile: "./contact.vcf"
+  contactFile: "./contact.vcf?v=portrait-v3"
 };
