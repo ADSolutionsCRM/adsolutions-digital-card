@@ -715,3 +715,64 @@ h1{margin:0;font-size:clamp(36px,7vw,55px);line-height:.98;letter-spacing:-2.6px
     height:96px !important;
   }
 }
+
+
+/* QR mobile containment fix */
+.qr-card{
+  overflow:hidden;
+}
+
+.qr-code-shell{
+  overflow:hidden;
+}
+
+#dynamic-qr{
+  overflow:hidden;
+  line-height:0;
+}
+
+#dynamic-qr img,
+#dynamic-qr canvas{
+  max-width:100% !important;
+  max-height:100% !important;
+}
+
+@media(max-width:620px){
+  .qr-card{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) 104px !important;
+    align-items:center !important;
+    gap:12px !important;
+    min-height:132px !important;
+    overflow:hidden !important;
+  }
+
+  .qr-copy{
+    min-width:0 !important;
+  }
+
+  .qr-code-shell{
+    width:104px !important;
+    height:104px !important;
+    padding:6px !important;
+    border-radius:14px !important;
+    overflow:hidden !important;
+    display:grid !important;
+    place-items:center !important;
+  }
+
+  #dynamic-qr{
+    width:92px !important;
+    height:92px !important;
+    overflow:hidden !important;
+  }
+
+  #dynamic-qr img,
+  #dynamic-qr canvas{
+    width:92px !important;
+    height:92px !important;
+    max-width:92px !important;
+    max-height:92px !important;
+    object-fit:contain !important;
+  }
+}
