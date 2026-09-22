@@ -4,7 +4,7 @@ window.ADS_WALLET_CARD = {
     role: "Founder",
     company: "ADSolutions",
     tagline: "STRATEGY · INNOVATION · GROWTH",
-    email: "info@adsolutionsglobal.com",
+    email: "andreas.demetriou@adsolutionsglobal.com",
     website: "https://adsolutionsglobal.com",
     instagram: "https://instagram.com/adsolutions.hq",
     phone: "+35796551277",
@@ -15,5 +15,5 @@ window.ADS_WALLET_CARD = {
     appleWalletUrl: "",
     googleWalletUrl: ""
   },
-  contactFile: "./contact.vcf?v=portrait-v3"
+  contactFile: "./contact.vcf?v=contact-branded-v1"
 };
