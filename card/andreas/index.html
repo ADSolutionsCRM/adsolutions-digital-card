@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=portrait-right-v4" />
+  <link rel="stylesheet" href="./styles.css?v=qr-v1" />
   <link rel="stylesheet" href="./portrait-mobile.v4.css" media="(max-width: 620px)" />
 </head>
 <body>
@@ -97,6 +97,16 @@
         </a>
       </nav>
 
+      <section class="qr-card" aria-label="QR code for this digital business card">
+        <div class="qr-copy">
+          <p class="qr-title">SCAN MY CARD</p>
+          <p class="qr-caption">Scan to open and save my digital business card.</p>
+        </div>
+        <div class="qr-code-shell">
+          <div id="dynamic-qr" aria-label="QR code"></div>
+        </div>
+      </section>
+
       <section class="services">
         <p class="section-label">WHAT ADSOLUTIONS DOES</p>
         <div class="service-grid">
@@ -126,6 +136,7 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="./config.js?v=contacts-v2"></script>
-  <script src="./app.js?v=contacts-v2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07Z9PfRBjrYd6bC0f5ecRMB2kltUuv3d8vJCO9p9lYxoaG1g4m0wDfhD2DJF/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./app.js?v=qr-v1"></script>
 </body>
 </html>
