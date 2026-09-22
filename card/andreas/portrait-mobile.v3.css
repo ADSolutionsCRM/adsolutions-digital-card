@@ -1,0 +1,51 @@
+/* Mobile portrait v3: deliberately independent of cached full-width rules.
+   The selectors are scoped to this card and do not affect desktop layouts. */
+@media (max-width: 620px) {
+  .card .hero > .portrait-wrap {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    flex: 0 0 auto !important;
+    width: 180px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 225px !important;
+    aspect-ratio: 4 / 5 !important;
+    margin: 18px auto 0 !important;
+    align-self: center !important;
+    overflow: hidden !important;
+    border-radius: 18px !important;
+  }
+
+  .card .hero > .portrait-wrap > .portrait {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: 85% 18% !important;
+    transform: scale(1.16) !important;
+    transform-origin: center 22% !important;
+    border-radius: 0 !important;
+    opacity: 1 !important;
+  }
+
+  .card .hero > .portrait-wrap > .portrait-fallback {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: inherit !important;
+  }
+
+  .card .hero > .portrait-wrap > .portrait[hidden] {
+    display: none !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .card .hero > .portrait-wrap {
+    width: 160px !important;
+    height: 200px !important;
+  }
+}
