@@ -4,8 +4,11 @@ N:Demetriou;Andreas;;;
 FN:Andreas Demetriou
 ORG:ADSolutions
 TITLE:Founder
+TEL;TYPE=CELL,VOICE:+35796551277
 EMAIL;TYPE=INTERNET,WORK:info@adsolutionsglobal.com
 URL;TYPE=WORK:https://adsolutionsglobal.com
-URL:https://instagram.com/adsolutions.hq
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/andreas-demetriou-b472a7a3
+URL;TYPE=Instagram:https://instagram.com/adsolutions.hq
+URL;TYPE=WhatsApp:https://wa.me/35796551277
 NOTE:Strategy · Innovation · Growth
 END:VCARD
