@@ -59,17 +59,29 @@
   if (save && cfg.contactFile) save.href = cfg.contactFile;
 
   const qrContainer = $("dynamic-qr");
-  if (qrContainer && window.QRCode) {
+  if (qrContainer) {
     const qrUrl = window.location.origin + window.location.pathname;
     qrContainer.innerHTML = "";
-    new QRCode(qrContainer, {
-      text: qrUrl,
-      width: 180,
-      height: 180,
-      colorDark: "#071321",
-      colorLight: "#ffffff",
-      correctLevel: QRCode.CorrectLevel.H
-    });
+
+    if (window.QRCode) {
+      new QRCode(qrContainer, {
+        text: qrUrl,
+        width: 180,
+        height: 180,
+        colorDark: "#071321",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+    } else {
+      const fallbackQr = document.createElement("img");
+      fallbackQr.src = "https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=0&data=" + encodeURIComponent(qrUrl);
+      fallbackQr.alt = "QR code for Andreas Demetriou digital business card";
+      fallbackQr.width = 180;
+      fallbackQr.height = 180;
+      fallbackQr.loading = "eager";
+      fallbackQr.decoding = "async";
+      qrContainer.appendChild(fallbackQr);
+    }
   }
 
   const activateWalletLink = (id, url) => {
